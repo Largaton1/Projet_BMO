@@ -3,15 +3,18 @@ UseCaseDiagram [frame=true framecolor=steelblue label="Usecase Diagram"] {
   actor a as "Parieur"
   system s as "Paris en ligne" [fillcolor=whitesmoke] {
     usecase u1 as "S'authentifier" 
+    usecase u6 as "Faire un pari" 
     usecase u2 as "Recharger ces jetons" 
-    usecase u5 as "Modifier ses informations personnelles"
-    usecase u3 as "Proposer un évènement" 
-    usecase u4 as "Définir les paramètres" 
+    usecase u3 as "Mettre à jour ses informations personnelles"
+    usecase u4 as "Proposer un évènement" 
+    usecase u5 as "Définir les paramètres des évènements" 
   }
   actor b as "Bookmarker" 
+  a --  u1
+    a --  u2
+      a --  u3
+      a  -- u6
 
-  a --  u4
-  a --  u5
-  u3 -- b
   u4 -- b
+  u5 -- b
 }
