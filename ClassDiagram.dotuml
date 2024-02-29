@@ -1,0 +1,82 @@
+ClassDiagram [frame=true framecolor=steelblue label="Class Diagram"] {
+ 
+
+  
+ class Parieur {
+ private IdParieur: int
+  private nom : string
+  private prenom: string
+  private pseudo: string
+  private jetons: int
+private  email: string
+  private password: string
+  public sAuthentifier()
+public faireUnPari()
+    public rechargerJeton()
+    public majInfoPerso()
+
+ }
+
+class Evenement {
+private IdEvenement: int
+private nom : string
+private lieu : string
+  private resultat: string
+  private dateEvenement: Date
+  private heureDebut: date
+  private heureFin: Date
+private equipes: string
+  
+ }
+
+class Paris {
+private IdPari: int
+private montantMin : int
+private montantMax : int
+ 
+ }
+
+ class PariSimple {
+private IdPariSimple: int
+ }
+
+ class PariAvance {
+private IdPariAvance: int
+ }
+
+ class Ticket {
+private IdTicket: int
+private cote: int
+private mise: int
+ private IdPari: int
+ }
+
+ class Bookmarker {
+private nom: string
+ }
+
+  class Sport {
+private IdSport: int
+ }
+ class Football {
+private IdFootball: int
+ }
+class BasketBall {
+private IdBasketBall: int
+ }
+ class Tenis {
+private IdTenis: int
+ }
+ class CourseDeChevaux {
+private IdCourse   : int
+ }
+
+ class Regles {
+private IdRegle  : int
+ }
+
+ class Source {
+private IdSource  : int
+ }
+  
+}
