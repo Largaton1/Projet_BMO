@@ -1,0 +1,9 @@
+SequenceDiagram [frame=true framecolor=steelblue label="Sequence Diagram"] {
+  actor Parieur 
+  lifeline ":ParisEnLigne" as system autoactivate
+ Parieur --> system "Cliquer sur se connecter"
+  system -r-> Parieur "Afficher le formulaire de connexion"
+   Parieur --> system "Renseigner ses identifiants"
+   system --> system "verifier les informations saisies"
+   system -r-> Parieur "Connexion échouée"
+}

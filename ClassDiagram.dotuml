@@ -25,7 +25,7 @@ private lieu : string
   private dateEvenement: Date
   private heureDebut: date
   private heureFin: Date
-private equipes: string
+    private equipes: string
   
  }
 
@@ -61,8 +61,8 @@ private IdSport: int
  class Football {
 private IdFootball: int
  }
-class BasketBall {
-private IdBasketBall: int
+class Basket {
+private IdBasket: int
  }
  class Tenis {
 private IdTenis: int
@@ -78,5 +78,43 @@ private IdRegle  : int
  class Source {
 private IdSource  : int
  }
+
+ align {
+ Football
+ Basket
+ Tenis
+ CourseDeChevaux
+ }
+
+ align {
+ Parieur
+ Paris
+ Ticket
+
+ }
+
+ align {
+ Paris
+
+ Ticket
+
+ }
+
+ Parieur "0..*" -- "0..*" Paris : "             effectuer"
   
+ Ticket "1" -- "1" Paris : "          créer"
+  Paris "1..*" -- "1..*" Evenement : "          créer"
+   Evenement "1..*" -- "0..*" Source : "     créer"
+     Evenement "0..*" -- "1" Bookmarker : "     proposer"
+          Evenement "0..*" -- "1" Sport : "     concerner"
+          
+  Regles -a-> Sport
+
+  Football -g-> Sport
+  Basket -g-> Sport
+  Tenis -g-> Sport
+  CourseDeChevaux -g-> Sport
+
+  PariAvance -g-> Paris
+  PariSimple -g-> Paris
 }

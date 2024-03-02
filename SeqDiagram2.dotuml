@@ -1,0 +1,17 @@
+SequenceDiagram [frame=true framecolor=steelblue label="Sequence Diagram"] {
+  actor Parieur  
+  lifeline ":ParisEnLigne" as system autoactivate
+  lifeline ":Pari" as pari autoactivate
+  lifeline ":Ticket" as ticket autoactivate
+ 
+Parieur --> system "Cliquer sur faire un pari"
+system -r-> Parieur "Afficher le formulaire de pari"
+Parieur --> system "Renseigner les informations du pari"
+system --> system "verifierInfosSaisies"
+
+system --> pari "Valider un nouveau pari"
+pari --> ticket "Créer un nouveau pari"
+ticket --> system "Afficher ticket de pari crée avec succès"
+system --> system "debiterClient"
+system -r-> Parieur "Afficher votre pari a été crée avec succès"
+}

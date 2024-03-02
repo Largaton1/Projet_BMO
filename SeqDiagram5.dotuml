@@ -1,0 +1,11 @@
+SequenceDiagram [frame=true framecolor=steelblue label="Sequence Diagram"] {
+  actor Parieur 
+  lifeline ":ParisEnLigne" as system autoactivate
+ Parieur --> system "Cliquer sur recharger ces jetons"
+  system -r-> Parieur "Afficher le formulaire de rechargement"
+  Parieur --> system "Entrer le montant"
+   Parieur --> system "Choisir le moyen de paiement"
+   system --> system "verifier les informations saisies"
+system --> system "recharger"
+   system -r-> Parieur "Afficher rechargement reussi"
+}
