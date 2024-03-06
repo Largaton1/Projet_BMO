@@ -4,8 +4,10 @@ import java.util.*;
 
 import javax.persistence.*;
 
-@Entity
-public class Sport {
+import lombok.*;
+
+@Entity @Getter @Setter
+public class Sport  {
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "id_sport")
     private int idSport;

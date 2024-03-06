@@ -29,8 +29,6 @@ public class Parieur {
     @Column(name = "password")
     private String password;
     
-    // Getters and setters
-    
     @OneToMany(mappedBy = "parieur")
     private List<Paris> paris;
 }

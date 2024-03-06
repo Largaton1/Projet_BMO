@@ -2,8 +2,10 @@ package com.l3miage.parisenligne.model;
 
 import javax.persistence.*;
 
-@Entity
-public class Football {
+import lombok.*;
+
+@Entity @Getter @Setter
+public class Football extends Sport {
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "id_football")
     private int idFootball;
@@ -12,6 +14,6 @@ public class Football {
     @JoinColumn(name = "sport_id")
     private Sport sport;
     
-    // Other attributes and methods
+
 }
 

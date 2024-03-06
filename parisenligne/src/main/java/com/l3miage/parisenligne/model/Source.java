@@ -4,7 +4,9 @@ import java.util.*;
 
 import javax.persistence.*;
 
-@Entity
+import lombok.*;
+
+@Entity @Getter @Setter
 public class Source {
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "id_source")

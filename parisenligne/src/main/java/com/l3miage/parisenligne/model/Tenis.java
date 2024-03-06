@@ -2,8 +2,10 @@ package com.l3miage.parisenligne.model;
 
 import javax.persistence.*;
 
-@Entity
-public class Tenis {
+import lombok.*;
+
+@Entity @Getter @Setter
+public class Tenis extends Sport {
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "id_tenis")
     private int idTenis;

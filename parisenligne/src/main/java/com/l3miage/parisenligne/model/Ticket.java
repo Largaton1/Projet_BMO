@@ -2,7 +2,9 @@ package com.l3miage.parisenligne.model;
 
 import javax.persistence.*;
 
-@Entity
+import lombok.*;
+
+@Entity @Getter @Setter
 public class Ticket {
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "id_ticket")
