@@ -1,25 +1,38 @@
 package com.l3miage.parisenligne.model;
 
-import java.math.*;
-import java.time.*;
+import java.util.*;
 
 import javax.persistence.*;
 
-import org.openxava.annotations.*;
-import org.openxava.model.*;
-
 import lombok.*;
-
-
-
 @Entity @Getter @Setter
-public class Parieur extends Identifiable {
-	
-	@Column(length=50) @Required
-	String description;
-	
-	LocalDate date;
-	
-	BigDecimal amount;
-
+public class Parieur {
+    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name = "id_parieur")
+    private int idParieur;
+    
+    @Column(name = "nom")
+    private String nom;
+    
+    @Column(name = "prenom")
+    private String prenom;
+    
+    @Column(name = "pseudo")
+    private String pseudo;
+    
+    @Column(name = "jetons")
+    private int jetons;
+    
+    @Column(name = "email")
+    private String email;
+    
+    @Column(name = "password")
+    private String password;
+    
+    // Getters and setters
+    
+    @OneToMany(mappedBy = "parieur")
+    private List<Paris> paris;
 }
+
+
