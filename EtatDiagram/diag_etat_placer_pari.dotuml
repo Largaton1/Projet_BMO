@@ -4,6 +4,7 @@ StateDiagram [frame=true framecolor=steelblue label=" Placer un pari" splines=or
 	state EvenementTerminé
   state win
   state perdu
+  state annuler
   choice resultat
   initialState->DebutEvenement "PlacerPari"
   DebutEvenement -> EvenementEnCours "Début de l'évènement"
@@ -11,6 +12,8 @@ StateDiagram [frame=true framecolor=steelblue label=" Placer un pari" splines=or
   EvenementTerminé -> resultat 
   resultat-> perdu
   resultat->win
+  resultat->annuler
   win-> finalstate "créditer parieur"
   perdu -> finalstate
+   annuler->finalstate
 }
