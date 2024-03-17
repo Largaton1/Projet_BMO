@@ -1,9 +1,0 @@
-SequenceDiagram [frame=true framecolor=steelblue label="Sequence Diagram"] {
-  actor Parieur 
-  lifeline ":ParisEnLigne" as system autoactivate
- Parieur --> system "Cliquer sur parier"
-  system -r-> Parieur "Afficher le formulaire de pari"
-   Parieur --> system "Renseigner le formulaire de pari"
-   system --> system "verifier les informations saisies"
-   system -r-> Parieur "Afficher formulaire incorrect"
-}

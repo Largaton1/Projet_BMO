@@ -1,10 +1,13 @@
-StateDiagram {
- state EvenementCree
- state EvenementEnCours
- state DebutEvenement
- initialstate -> EvenementCree
- EvenementCree -> DebutEvenement
- DebutEvenement -> EvenementEnCours 
- EvenementEnCours -> finalstate 
- EvenementCree -> finalstate "evènement annulé"
+StateDiagram [frame=true framecolor=steelblue label="Evenement" splines=ortho] {
+  state EvenementCrée
+  state EvenementEnCours
+	state EvenementTerminé
+  state Annuler
+  initialState-> EvenementCrée 
+  EvenementCrée -> EvenementEnCours "Début d'évènement"
+  EvenementCrée -> Annuler "Annuler l'évènement"
+  EvenementEnCours -> EvenementTerminé "Terminé l'évènement"
+  EvenementEnCours -> Annuler "Annuler l'évènement"
+  Annuler ->finalstate "Fin de l'évènement "
+  EvenementTerminé ->finalstate "Fin de l'évènement"
 }

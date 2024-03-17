@@ -1,0 +1,16 @@
+SequenceDiagram [frame=true framecolor=steelblue label="Parametrer évènement"] {
+lifeline ":Bookmarker" as bookmarker autoactivate
+  lifeline ":ParisEnLigne" as system autoactivate
+   lifeline ":Evenement" as evenement autoactivate
+
+ 
+bookmarker --> system "Parametrer évènement"
+system -r-> bookmarker "Afficher le formulaire de paramétrage d'évènement"
+bookmarker --> system "Renseigner le formulaire"
+system --> system "verifier les informations"
+system --> evenement "Parametrer un évènement"
+evenement -r-> system " l'évènement a été parametré avec succès"
+system -r-> bookmarker "Enregistrement réussi " 
+
+
+}

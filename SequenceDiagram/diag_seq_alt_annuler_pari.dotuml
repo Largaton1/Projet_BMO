@@ -1,17 +1,17 @@
-SequenceDiagram [frame=true framecolor=steelblue label="Sequence Diagram"] {
+SequenceDiagram [frame=true framecolor=steelblue label="Recharger ces jetons"] {
   actor Parieur  
   lifeline ":ParisEnLigne" as system autoactivate
   lifeline ":Pari" as pari autoactivate
   lifeline ":Ticket" as ticket autoactivate
  
-Parieur --> system "Cliquer sur annuler un pari"
+Parieur --> system "Annuler un pari"
 system -r-> Parieur "Afficher le formulaire"
 Parieur --> system "Renseigner le formulaire"
 system --> system "verifierInfosSaisies"
 
 system --> pari "Suppression du pari"
 pari --> ticket "Suppression du ticket "
-ticket --> system "Afficher ticket de pari supprimé avec succès"
+ticket --> system "Ticket de pari supprimé avec succès"
 system --> system "crediterClient"
-system -r-> Parieur "Afficher votre pari a été supprimé avec succès"
+system -r-> Parieur "Pari a été supprimé avec succès"
 }

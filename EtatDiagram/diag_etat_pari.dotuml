@@ -1,0 +1,16 @@
+StateDiagram [frame=true framecolor=steelblue label=" Placer un pari" splines=ortho] {
+  state DebutEvenement
+  state EvenementEnCours
+	state EvenementTerminé
+  state win
+  state perdu
+  choice resultat
+  initialState->DebutEvenement "PlacerPari"
+  DebutEvenement -> EvenementEnCours "Début de l'évènement"
+  EvenementEnCours -> EvenementTerminé "Terminé l'évènement"
+  EvenementTerminé -> resultat 
+  resultat-> perdu
+  resultat->win
+  win-> finalstate "créditer parieur"
+  perdu -> finalstate
+}

@@ -1,0 +1,17 @@
+SequenceDiagram [frame=true framecolor=steelblue label="Placer un pari"] {
+  actor Parieur  
+  lifeline ":ParisEnLigne" as system autoactivate
+
+ 
+Parieur --> system "Placer un pari"
+system -r-> Parieur "Retourner la liste des évènements"
+Parieur --> system "Selectionner un évènement"
+Parieur --> system "choisit le type de pari"
+Parieur --> system "saisir le montant du pari"
+Parieur --> system "soumettre le ticket"
+system --> system "verifier les informations saisies"
+system -r-> Parieur "Jeton insuffisant"
+
+
+
+}

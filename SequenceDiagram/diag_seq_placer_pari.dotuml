@@ -1,0 +1,21 @@
+SequenceDiagram [frame=true framecolor=steelblue label="Placer un pari"] {
+  actor Parieur  
+  lifeline ":ParisEnLigne" as system autoactivate
+  lifeline ":Pari" as pari autoactivate
+  lifeline ":Ticket" as ticket autoactivate
+ 
+Parieur --> system "Placer un pari"
+system -r-> Parieur "Retourner la liste des évènements"
+Parieur --> system "Selectionner un évènement"
+Parieur --> system "choisit le type de pari"
+Parieur --> system "saisir le montant du pari"
+Parieur --> system "soumettre le ticket"
+system --> system "verifier les informations saisies"
+system --> pari "Valider un nouveau pari"
+pari --> ticket "Créer un nouveau pari"
+ticket --> system "Ticket de pari crée avec succès"
+system --> system "debiterClient"
+system -r-> Parieur "Votre pari a été crée avec succès"
+
+
+}
