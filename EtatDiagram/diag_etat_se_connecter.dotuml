@@ -1,0 +1,14 @@
+StateDiagram [frame=true framecolor=steelblue label="Se connecter" splines=ortho] {
+  state Deconnecter
+  
+  state Connecter
+
+  
+  initialState->Deconnecter
+  Deconnecter -> Connecter "connexion"
+  Connecter -> Deconnecter "deconnexion"
+  
+  Connecter -> finalstate "Fin"
+ 
+  
+}

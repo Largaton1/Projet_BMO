@@ -1,8 +1,0 @@
-StateDiagram {
- state EvenementCreer
- state EvenementEnCours
- initialstate -> EvenementCreer 
- EvenementCreer -> EvenementEnCours "debut des évènements"
- EvenementEnCours -> finalstate "l'évènement prend fin"
- EvenementCreer -> finalstate "l'évènement est annulé"
-}
