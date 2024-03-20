@@ -21,10 +21,10 @@ public class Parieur {
     private Long id;
 
     @Column
-    private String nom;
+    private String Nom;
 
     @Column
-    private String prenom;
+    private String Prenom;
 
     @Column(unique = true)
     private String email;
