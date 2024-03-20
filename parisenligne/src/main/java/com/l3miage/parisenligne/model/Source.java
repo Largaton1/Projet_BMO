@@ -1,21 +1,21 @@
-package com.l3miage.parisenligne.model;
+// package com.l3miage.parisenligne.model;
 
-import java.util.*;
+// import java.util.*;
 
-import javax.persistence.*;
+// import javax.persistence.*;
 
-import lombok.*;
+// import lombok.*;
 
-@Entity @Getter @Setter
-public class Source {
-    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name = "id_source")
-    private int idSource;
+// @Entity @Getter @Setter
+// public class Source {
+//     @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+//     @Column(name = "id_source")
+//     private int idSource;
     
-    // Other attributes
+//     // Other attributes
     
-    @OneToMany(mappedBy = "source")
-    private List<Evenement> evenements;
+//     @OneToMany(mappedBy = "source")
+//     private List<Evenement> evenements;
     
-    // Getters and setters
-}
+//     // Getters and setters
+// }

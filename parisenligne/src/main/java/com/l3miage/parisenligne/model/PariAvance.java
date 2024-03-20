@@ -1,20 +1,20 @@
-package com.l3miage.parisenligne.model;
+// package com.l3miage.parisenligne.model;
 
-import javax.persistence.*;
+// import javax.persistence.*;
 
-import lombok.*;
+// import lombok.*;
 
-@Entity @Getter @Setter
-public class PariAvance extends Paris{
-    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name = "id_pari_avance")
-    private int idPariAvance;
+// @Entity @Getter @Setter
+// public class PariAvance extends Paris{
+//     @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+//     @Column(name = "id_pari_avance")
+//     private int idPariAvance;
     
-    // Other attributes
+//     // Other attributes
     
-    @ManyToOne
-    @JoinColumn(name = "paris_id")
-    private Paris paris;
+//     @ManyToOne
+//     @JoinColumn(name = "paris_id")
+//     private Paris paris;
     
-    // Getters and setters
-}
+//     // Getters and setters
+// }

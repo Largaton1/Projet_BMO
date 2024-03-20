@@ -1,36 +1,54 @@
 package com.l3miage.parisenligne.model;
 
-import java.util.*;
+import java.math.BigDecimal;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-import lombok.*;
-@Entity @Getter @Setter
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Getter
+@Setter
 public class Parieur {
-    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name = "id_parieur")
-    private int idParieur;
-    
-    @Column(name = "nom")
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column
     private String nom;
-    
-    @Column(name = "prenom")
+
+    @Column
     private String prenom;
-    
-    @Column(name = "pseudo")
-    private String pseudo;
-    
-    @Column(name = "jetons")
-    private int jetons;
-    
-    @Column(name = "email")
+
+    @Column(unique = true)
     private String email;
-    
-    @Column(name = "password")
-    private String password;
-    
-    @OneToMany(mappedBy = "parieur")
-    private List<Paris> paris;
+
+    @Column
+    private BigDecimal solde;
+
+    public void login(String email, String password) {
+
+    }
+
+    public void consulterPari() {
+
+    }
+
+    public void consulterEvent() {
+
+    }
+
+    public void placerPari() {
+
+    }
+
+    public void rechargerJetons() {
+
+    }
 }
-
-
