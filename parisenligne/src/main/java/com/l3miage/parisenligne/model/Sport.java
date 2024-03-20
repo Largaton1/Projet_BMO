@@ -13,7 +13,7 @@ import lombok.Data;
 public class Sport {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+    @Column(name = "sport_id")
     private int idSport;
 
     @Column

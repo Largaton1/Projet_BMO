@@ -36,10 +36,10 @@ public class Evenement {
     @Column(name = "Heure_fin")
     private Date heureFin;
 
-    @Column
+    @Column(name = "Domicile")
     private String homeTeam;
 
-    @Column
+    @Column(name = "Exterieur")
     private String awayTeam;
 
     // Getters and setters

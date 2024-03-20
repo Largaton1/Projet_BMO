@@ -15,7 +15,7 @@ import lombok.Data;
 public class Pari {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	// @Column(name = "id_pari")
+	 @Column(name = "id_pari")
 	private int idPari;
 
 	@Column(name = "montant_min")
