@@ -25,13 +25,14 @@ private lieu : string
   private dateEvenement: Date
   private heureDebut: date
   private heureFin: Date
-    private equipes: string
+  private homeTeam: string
+  private awayTeam: string
     public ajoutEvent()
     public maj()
   
  }
 
-class Paris {
+class Pari {
 private IdPari: int
 private montantMin : float
 private montantMax : float
@@ -55,6 +56,7 @@ private mise: int
 
  class Bookmarker {
 private nom: string
+private description: string
  }
 
   class Sport {
@@ -90,22 +92,22 @@ private IdSource  : int
 
  align {
  Parieur
- Paris
+ Pari
  Ticket
 
  }
 
  align {
- Paris
+ Pari
 
  Ticket
 
  }
 
- Parieur "0..*" -- "0..*" Paris : "             effectuer"
+ Parieur "0..*" -- "0..*" Pari : "             effectuer"
   
- Ticket "1" -- "1" Paris : "          créer"
-  Paris "1..*" -- "1..*" Evenement : "          créer"
+ Ticket "1" -- "1" Pari : "          créer"
+  Pari "1..*" -- "1..*" Evenement : "          créer"
    Evenement "1..*" -- "0..*" Source : "     créer"
      Evenement "0..*" -- "1" Bookmarker : "     proposer"
           Evenement "0..*" -- "1" Sport : "     concerner"
@@ -117,6 +119,6 @@ private IdSource  : int
   Tenis -g-> Sport
   CourseDeChevaux -g-> Sport
 
-  PariAvance -g-> Paris
-  PariSimple -g-> Paris
+  PariAvance -g-> Pari
+  PariSimple -g-> Pari
 }

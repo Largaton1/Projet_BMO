@@ -1,31 +1,25 @@
-// package com.l3miage.parisenligne.model;
+package com.l3miage.parisenligne.model;
 
-// import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
-// @Entity
-// public class PariSimple extends Paris {
-//     @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-//     @Column(name = "id_pari_simple")
-//     private int idPariSimple;
-    
-// 	@ManyToOne
-//     @JoinColumn(name = "paris_id")
-//     private Paris paris;
-    
-//     // Getters and setters
-// 	  public int getIdPariSimple() {
-// 			return idPariSimple;
-// 		}
+import lombok.Data;
 
-// 		public void setIdPariSimple(int idPariSimple) {
-// 			this.idPariSimple = idPariSimple;
-// 		}
+@Entity
+@Data
+public class PariSimple extends Pari {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_pari_simple")
+	private int idPariSimple;
 
-// 		public Paris getParis() {
-// 			return paris;
-// 		}
+	@ManyToOne
+	@JoinColumn(name = "pari_id")
+	private Pari pari;
 
-// 		public void setParis(Paris paris) {
-// 			this.paris = paris;
-// 		}
-// }
+}

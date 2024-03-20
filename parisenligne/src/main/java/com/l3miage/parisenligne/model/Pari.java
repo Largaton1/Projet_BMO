@@ -12,10 +12,10 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Paris {
+public class Pari {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_pari")
+	// @Column(name = "id_pari")
 	private int idPari;
 
 	@Column(name = "montant_min")
@@ -28,30 +28,7 @@ public class Paris {
 	@JoinColumn(name = "parieur_id")
 	private Parieur parieur;
 
-	// Getters and setters
-	public int getIdPari() {
-		return idPari;
-	}
-
-	public void setIdPari(int idPari) {
-		this.idPari = idPari;
-	}
-
-	public int getMontantMin() {
-		return montantMin;
-	}
-
-	public void setMontantMin(int montantMin) {
-		this.montantMin = montantMin;
-	}
-
-	public int getMontantMax() {
-		return montantMax;
-	}
-
-	public void setMontantMax(int montantMax) {
-		this.montantMax = montantMax;
-	}
+	
 
 	// public List<Ticket> getTickets() {
 	// return tickets;

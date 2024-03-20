@@ -21,5 +21,5 @@ public class Sport {
     // Getters and setters
 
     // @OneToMany(mappedBy = "Sport")
-    // private List<Regles> regles;
+    // private List<Sport> regles;
 }

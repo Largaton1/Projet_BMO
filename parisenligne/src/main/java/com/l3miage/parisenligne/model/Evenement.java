@@ -8,47 +8,44 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 @Entity
-@Getter
-@Setter
+@Data
 public class Evenement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_evenement")
+
     private int idEvenement;
 
-    @Column(name = "nom")
+    @Column(name = "Nom_evenement")
     private String nom;
 
-    @Column(name = "lieu")
+    @Column(name = "Lieu")
     private String lieu;
 
-    @Column(name = "resultat")
+    @Column(name = "Resultat")
     private String resultat;
 
-    @Column(name = "date_evenement")
+    @Column(name = "Date_evenement")
     private Date dateEvenement;
 
-    @Column(name = "heure_debut")
+    @Column(name = "Heure_debut")
     private Date heureDebut;
 
-    @Column(name = "heure_fin")
+    @Column(name = "Heure_fin")
     private Date heureFin;
 
-    @Column(name = "equipes")
-    private String equipes;
+    @Column
+    private String homeTeam;
+
+    @Column
+    private String awayTeam;
 
     // Getters and setters
 
     // @OneToMany(mappedBy = "evenement")
     // private List<Paris> paris;
-
-    // @ManyToOne
-    // @JoinColumn(name = "bookmarker_id")
-    // private Bookmarker bookmarker;
 
     // @ManyToOne
     // @JoinColumn(name = "sport_id")

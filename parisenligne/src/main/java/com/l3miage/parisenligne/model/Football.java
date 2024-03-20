@@ -1,19 +1,19 @@
-// package com.l3miage.parisenligne.model;
+package com.l3miage.parisenligne.model;
 
-// import javax.persistence.*;
+import javax.persistence.*;
 
-// import lombok.*;
+import lombok.*;
 
-// @Entity @Getter @Setter
-// public class Football extends Sport {
-//     @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-//     @Column(name = "id_football")
-//     private int idFootball;
+@Entity @Getter @Setter
+public class Football extends Sport {
+    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+
+    private int idFootball;
     
-//     @OneToOne
-//     @JoinColumn(name = "sport_id")
-//     private Sport sport;
+    @OneToOne
+    @JoinColumn(name = "sport_id")
+    private Sport sport;
     
 
-// }
+}
 
