@@ -14,8 +14,6 @@ public class Bookmarker {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
-	private int id;
-
 	@Column(name = "Nom")
 	private String nom;
 

@@ -1,25 +1,23 @@
 package com.l3miage.parisenligne.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-import lombok.Data;
+import org.openxava.annotations.*;
+
+import lombok.*;
 
 @Entity
 @Data
 public class Sport {
     @Id
+    @Hidden
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "sport_id")
+  
     private int idSport;
 
-    @Column
-    private String NomSport;
+    @Column(length = 70)
+   String description;
     // Getters and setters
 
-    // @OneToMany(mappedBy = "Sport")
-    // private List<Sport> regles;
+   
 }

@@ -1,65 +1,31 @@
 package com.l3miage.parisenligne.model;
 
-import java.util.Date;
+import java.time.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-import lombok.Data;
+import org.openxava.annotations.*;
+
+import lombok.*;
 
 @Entity
+@Table(name = "evenement") // Assuming the table name in the database is "evenement"
 @Data
 public class Evenement {
     @Id
+    @Hidden
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    private int idEvenement;
+    @Column(name = "description")
+    private String description;
 
-    @Column(name = "Nom_evenement")
-    private String nom;
+    @Column(name = "date_evenement")
+    private LocalDate dateEvenement; 
 
-    @Column(name = "Lieu")
-    private String lieu;
-
-    @Column(name = "Resultat")
-    private String resultat;
-
-    @Column(name = "Date_evenement")
-    private Date dateEvenement;
-
-    @Column(name = "Heure_debut")
-    private Date heureDebut;
-
-    @Column(name = "Heure_fin")
-    private Date heureFin;
-
-    @Column(name = "Domicile")
+    @Column(name = "domicile")
     private String homeTeam;
 
-    @Column(name = "Exterieur")
+    @Column(name = "exterieur")
     private String awayTeam;
-
-    // Getters and setters
-
-    // @OneToMany(mappedBy = "evenement")
-    // private List<Paris> paris;
-
-    // @ManyToOne
-    // @JoinColumn(name = "sport_id")
-    // private Sport sport;
-
-    // @ManyToOne
-    // @JoinColumn(name = "source_id")
-    // private Source source;
-
-    public void ajoutEvent() {
-
-    }
-
-    public void maj() {
-        // Implementation for updateOdds method
-    }
 }

@@ -1,4 +1,4 @@
-SequenceDiagram [frame=true framecolor=steelblue label="Recharger ces jetons"] {
+SequenceDiagram [frame=true framecolor=steelblue label="Annuler un pari"] {
   actor Parieur  
   lifeline ":ParisEnLigne" as system autoactivate
   lifeline ":Pari" as pari autoactivate

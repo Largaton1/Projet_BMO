@@ -1,41 +1,43 @@
 package com.l3miage.parisenligne.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
-import lombok.Data;
+import org.openxava.annotations.*;
+
+import lombok.*;
 
 @Entity
 @Data
+@Getter
+@Setter
 public class Pari {
 	@Id
+	@Hidden
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	 @Column(name = "id_pari")
+	
 	private int idPari;
 
-	@Column(name = "montant_min")
-	private int montantMin;
+	  @ManyToOne(fetch= FetchType.LAZY)
+	  
+     Evenement evenement;
+	  
+	  
+	  @ManyToOne(fetch= FetchType.LAZY)
+	  @DescriptionsList
+     TypePari typePari;
+	  
+	   @ManyToOne(fetch= FetchType.LAZY)
+	   @DescriptionsList
+    Sport sport;
 
-	@Column(name = "montant_max")
-	private int montantMax;
+	@Column(name = "montant")
+	private float montant;
 
-	@ManyToOne
-	@JoinColumn(name = "parieur_id")
-	private Parieur parieur;
+
+
+
 
 	
 
-	// public List<Ticket> getTickets() {
-	// return tickets;
-	// }
-
-	// public void setTickets(List<Ticket> tickets) {
-	// this.tickets = tickets;
-	// }
-
+	
 }

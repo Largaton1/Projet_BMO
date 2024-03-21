@@ -3,7 +3,7 @@ UseCaseDiagram [frame=true framecolor=steelblue label="Usecase Diagram"] {
   actor a as "Parieur"
   system s as "Paris en ligne" [fillcolor=whitesmoke] {
     usecase u1 as "S'authentifier" 
-    usecase u6 as "Faire un pari" 
+    usecase u6 as "Placer un pari" 
     usecase u2 as "Recharger ces jetons" 
     usecase u3 as "Mettre à jour ses informations personnelles"
     usecase u4 as "Proposer un évènement" 

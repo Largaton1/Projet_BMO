@@ -1,4 +1,4 @@
-SequenceDiagram [frame=true framecolor=steelblue label="Sequence Diagram"] {
+SequenceDiagram [frame=true framecolor=steelblue label="Recharger ses jetons"] {
 actor Parieur 
 lifeline ":ParisEnLigne" as system autoactivate
 Parieur --> system "Cliquer sur recharger ces jetons"

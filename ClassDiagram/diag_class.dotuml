@@ -11,7 +11,7 @@ ClassDiagram [frame=true framecolor=steelblue label="Class Diagram"] {
 private  email: string
   private password: string
   public sAuthentifier()
-public faireUnPari()
+public placerUnPari()
     public rechargerJeton()
     public majInfoPerso()
 

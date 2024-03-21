@@ -21,10 +21,10 @@ public class Parieur {
     private String Prenom;
 
     @Column(unique = true)
-    private String email;
+    private String Email;
 
-    @Column
-    private BigDecimal solde;
+  
+    private BigDecimal Solde;
 
     public void login(String email, String password) {
 
