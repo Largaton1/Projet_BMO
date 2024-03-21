@@ -7,7 +7,7 @@ import org.openxava.annotations.*;
 import lombok.*;
 
 @Entity
-@Data
+
 @Getter
 @Setter
 public class Pari {
@@ -17,9 +17,9 @@ public class Pari {
 	
 	Long idPari;
 
-	//  @ManyToOne(fetch= FetchType.LAZY)
-	//  @DescriptionsList
-   //  Evenement evenement;
+	@ManyToOne(fetch= FetchType.LAZY)
+	  @DescriptionsList
+     Evenement evenement;
 	  
 	  
 	  @ManyToOne(fetch= FetchType.LAZY)

@@ -1,2 +1,8 @@
 /*C3*/SET SCHEMA PUBLIC
 DISCONNECT
+/*C4*/SET SCHEMA PUBLIC
+alter table Evenement add column cote float
+alter table Evenement add column date date
+alter table Evenement add column score varchar(255)
+alter table Evenement add column sport_idSport integer
+alter table Evenement add constraint FKkjx9k4xxr5biv8sxu13e0kygi foreign key (sport_idSport) references Sport
