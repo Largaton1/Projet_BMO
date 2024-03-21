@@ -1,19 +1,15 @@
 package com.l3miage.parisenligne.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-import lombok.Data;
+import lombok.*;
 
 @Entity
 @Data
 public class Bookmarker {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
+	Long id;
 	@Column(name = "Nom")
 	private String nom;
 

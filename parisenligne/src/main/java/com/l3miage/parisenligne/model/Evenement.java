@@ -9,17 +9,18 @@ import org.openxava.annotations.*;
 import lombok.*;
 
 @Entity
-@Table(name = "evenement") // Assuming the table name in the database is "evenement"
+
 @Data
 public class Evenement {
     @Id
     @Hidden
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
+    private int id;
     @Column(name = "description")
     private String description;
 
+    
     @Column(name = "date_evenement")
     private LocalDate dateEvenement; 
 

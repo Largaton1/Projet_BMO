@@ -15,11 +15,11 @@ public class Pari {
 	@Hidden
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
-	private int idPari;
+	Long idPari;
 
-	  @ManyToOne(fetch= FetchType.LAZY)
-	  
-     Evenement evenement;
+	//  @ManyToOne(fetch= FetchType.LAZY)
+	//  @DescriptionsList
+   //  Evenement evenement;
 	  
 	  
 	  @ManyToOne(fetch= FetchType.LAZY)
@@ -32,12 +32,6 @@ public class Pari {
 
 	@Column(name = "montant")
 	private float montant;
-
-
-
-
-
-	
 
 	
 }

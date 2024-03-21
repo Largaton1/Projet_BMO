@@ -12,7 +12,7 @@ public class Sport {
     @Id
     @Hidden
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-  
+   
     private int idSport;
 
     @Column(length = 70)
